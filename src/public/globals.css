@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@utility container {
+  padding-inline: 16px;
+  margin-inline: auto;
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.modal {
+  background-color: var(--background);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 50px var(--slate-600);
+  overflow-y: auto;
+  max-height: calc(100vh - 2rem);
+  width: calc(100vw - 2rem);
+}
+.backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  overflow: hidden;
+  background-color: rgba(63, 69, 76, 0.8);
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--slate-600);
+}
