@@ -6,6 +6,7 @@ import {parseBlob} from "music-metadata-browser";
 import {MusicContext} from "@/context/musicContext";
 import toast from "react-hot-toast";
 import {saveAs} from "file-saver";
+import { CloudUpload, Download } from "lucide-react";
 
 function Header() {
   const [isopen, setisopen] = useState(false);
@@ -57,36 +58,10 @@ function Header() {
             <input type="file" id="fileUpload" className="hidden" onChange={handleFileChange} />
           </Modal>
           <Button onclick={() => setisopen(true)} varient="header">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15m0-3-3-3m0 0-3 3m3-3V15"
-              />
-            </svg>
+          <CloudUpload />
           </Button>
           <Button onclick={handleDownload} varient="header">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
-              />
-            </svg>
+          <Download />
           </Button>
         </div>
       </div>
