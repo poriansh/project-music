@@ -14,13 +14,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Toaster />
-        <MusicProvider>
-          <Header />
-          <footer className="fixed left-0 right-0 bottom-0">
-            {children}
-            <Footer />
-          </footer>
-        </MusicProvider>
+        <div className="sm:max-w-96 mx-auto">
+          <MusicProvider>
+            <Header />
+            <footer className="sm:max-w-96 mx-auto fixed left-0 right-0 bottom-0">
+              {children}
+              <Footer />
+            </footer>
+          </MusicProvider>
+        </div>
       </body>
     </html>
   );
