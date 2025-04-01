@@ -1,5 +1,10 @@
+import FormMusic from "@/components/FormMusic";
 
 
 export default function Home() {
-  return null
+  return (
+    <div>
+      <FormMusic/>
+    </div>
+  )
 }
