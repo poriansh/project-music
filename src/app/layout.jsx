@@ -15,14 +15,16 @@ export default function RootLayout({children}) {
     <html lang="en">
       <body>
         <Toaster />
-        <MusicProvider>
-          <Header />
-          <main>{children}</main>
-          <footer className="fixed left-0 right-0 bottom-0">
-            <FormMusic />
-            <Footer />
-          </footer>
-        </MusicProvider>
+        <div className="sm:max-w-80 m-auto">
+          <MusicProvider>
+            <Header />
+            <main>{children}</main>
+            <footer className="sm:max-w-80 m-auto fixed left-0 right-0 bottom-0">
+              <FormMusic />
+              <Footer />
+            </footer>
+          </MusicProvider>
+        </div>
       </body>
     </html>
   );
